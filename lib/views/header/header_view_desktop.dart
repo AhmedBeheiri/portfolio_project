@@ -1,4 +1,5 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -155,7 +156,8 @@ class HeaderViewDesktop extends StatelessWidget {
                           "".email("ahmedbeheirii@gmail.com");
                         },
                         style: ButtonStyle(
-                          shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                          shape:
+                              MaterialStateProperty.all(RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(sx(3)),
                           )),
                           padding: MaterialStateProperty.all(
@@ -178,6 +180,40 @@ class HeaderViewDesktop extends StatelessWidget {
                       ),
                       SizedBox(
                         width: sx(16),
+                      ),
+                      ElevatedButton.icon(
+                        onPressed: () {
+                          "https://drive.google.com/file/d/1CsAud8tqdv67zshGLVXFstb2OlJRN6jP/view?usp=sharing"
+                              .browse();
+                        },
+                        style: ButtonStyle(
+                          backgroundColor:
+                              MaterialStateProperty.all(Colors.white),
+                          shape:
+                              MaterialStateProperty.all(RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(sx(3)),
+                            side: BorderSide(
+                              color: Theme.of(context).colorScheme.primary,
+                              width: sx(1),
+                            ),
+                          )),
+                          padding: MaterialStateProperty.all(
+                            EdgeInsets.symmetric(
+                              horizontal: sx(8),
+                              vertical: sx(8),
+                            ),
+                          ),
+                        ),
+                        icon: Icon(
+                          FontAwesomeIcons.download,
+                          color: Colors.black,
+                          size: sx(7),
+                        ),
+                        label: Text('Download Resume',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: sx(7),
+                            )),
                       ),
                     ],
                   ),

@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_project/views/header/header_view_desktop.dart';
+import 'package:portfolio_project/views/id_card/id_card_view.dart';
 import 'package:portfolio_project/widgets/app_drawer/app_drawer.dart';
 import 'package:relative_scale/relative_scale.dart';
+
+import '../work_experience/work_experience_view.dart';
 
 class HomeViewTablet extends StatefulWidget {
   const HomeViewTablet({Key? key}) : super(key: key);
@@ -53,6 +56,10 @@ class _HomeViewTabletState extends State<HomeViewTablet> {
                 AppDrawer(),
                  SizedBox(height: sy(20)),
                 HeaderViewDesktop(),
+                SizedBox(height: sy(20)),
+                IdCardView(),
+                SizedBox(height: sy(20)),
+                WorkExperienceView(),
               ],
             ),
           );
